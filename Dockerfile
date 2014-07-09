@@ -22,6 +22,7 @@ RUN (cd /var/lib/jenkins/plugins && wget --no-check-certificate http://updates.j
 RUN (cd /var/lib/jenkins/plugins && wget --no-check-certificate http://updates.jenkins-ci.org/latest/git.hpi)
 RUN (cd /var/lib/jenkins/plugins && wget --no-check-certificate http://updates.jenkins-ci.org/latest/scm-api.hpi)
 RUN (cd /var/lib/jenkins/plugins && wget --no-check-certificate http://updates.jenkins-ci.org/latest/swarm.hpi)
+RUN (cd /var/lib/jenkins/plugins && wget --no-check-certificate http://updates.jenkins-ci.org/latest/envinject.hpi)
 ADD config.xml /var/lib/jenkins/config.xml
 ENV JENKINS_HOME /var/lib/jenkins
 RUN wget https://get.docker.io/builds/Linux/x86_64/docker-latest -O /usr/local/bin/docker && chmod +x /usr/local/bin/docker
