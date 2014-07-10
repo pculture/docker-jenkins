@@ -1,7 +1,5 @@
 FROM stackbrew/ubuntu:14.04
 MAINTAINER Arcus "http://arcus.io"
-RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe multiverse" > /etc/apt/sources.list
-RUN echo "deb-src http://archive.ubuntu.com/ubuntu trusty main universe multiverse" >> /etc/apt/sources.list
 RUN apt-get update
 RUN RUNLEVEL=1 DEBIAN_FRONTEND=noninteractive apt-get install -y wget openjdk-7-jre-headless git-core unzip
 RUN wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | apt-key add -
