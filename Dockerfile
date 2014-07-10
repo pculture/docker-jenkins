@@ -34,6 +34,7 @@ RUN wget http://s3.amazonaws.com/ec2-downloads/ec2-api-tools.zip -O /tmp/ec2tool
     mv /usr/local/aws/ec2-api-tools-* /usr/local/aws/ec2
 ENV PATH $PATH:/usr/local/aws/ec2/bin
 ENV EC2_HOME /usr/local/aws/ec2
+ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64/jre
 
 
 EXPOSE 8080
