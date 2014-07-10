@@ -33,6 +33,7 @@ RUN wget http://s3.amazonaws.com/ec2-downloads/ec2-api-tools.zip -O /tmp/ec2tool
     mkdir /usr/local/aws && unzip -d /usr/local/aws /tmp/ec2tools.zip && rm /tmp/ec2tools.zip && \
     mv /usr/local/aws/ec2-api-tools-* /usr/local/aws/ec2
 ENV PATH $PATH:/usr/local/aws/ec2/bin
+ENV EC2_HOME /usr/local/aws/ec2
 
 
 EXPOSE 8080
