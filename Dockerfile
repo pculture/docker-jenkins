@@ -1,7 +1,13 @@
 FROM stackbrew/ubuntu:14.04
 MAINTAINER Arcus "http://arcus.io"
 RUN apt-get update
-RUN RUNLEVEL=1 DEBIAN_FRONTEND=noninteractive apt-get install -y wget openjdk-7-jre-headless git-core unzip apache2-utils
+RUN RUNLEVEL=1 DEBIAN_FRONTEND=noninteractive apt-get install -y \
+    wget \
+    openjdk-7-jre-headless \
+    git-core \
+    unzip \
+    apache2-utils \
+    curl
 RUN wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | apt-key add -
 RUN echo "deb http://pkg.jenkins-ci.org/debian binary/" > /etc/apt/sources.list.d/jenkins.list
 RUN apt-get update
